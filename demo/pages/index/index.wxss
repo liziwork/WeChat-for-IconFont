@@ -1,0 +1,49 @@
+/*引入font.wxss文件，使用绝对路径，避免路径错误引入失败  */
+@import "../../font.wxss";
+page{
+  width: 100%;
+  font-size: 0.8rem;
+  background: #f8f8f8;
+}
+.fa{
+  font-size: 1rem;
+}
+.title{
+  padding: 20rpx;
+}
+.menu-demo{
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  color: #333;
+}
+.menu-item{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav{
+  width: calc(100% - 40rpx);
+  height: 80rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.nav .fa{
+  color: #8baa1e;
+}
+.nav-title{
+  padding-left: 10rpx;
+  flex-grow: 1;
+}
+.nav-text,
+.fa.fa-next{
+  color: #999;
+}

@@ -1,0 +1,66 @@
+<!-- 菜单按钮 -->
+<view class='title'>菜单按钮（不循环）</view>
+<view class='menu-demo'>
+  <view class='menu-item'>
+    <view class='fa fa-home'></view>
+    <text>首页</text>
+  </view>
+  <view class='menu-item'>
+    <view class='fa fa-fenlei'></view>
+    <text>分类</text>
+  </view>
+  <view class='menu-item'>
+    <view class='fa fa-youjian'></view>
+    <text>消息</text>
+  </view>
+  <view class='menu-item'>
+    <view class='fa fa-dingwei'></view>
+    <text>地图</text>
+  </view>
+  <view class='menu-item'>
+    <view class='fa fa-jingjiren'></view>
+    <text>我的</text>
+  </view>
+</view>
+<view class='title'>菜单按钮（JS数组循环）</view>
+<view class='menu-demo'>
+  <view class='menu-item' wx:for="{{menu}}" wx:key="menu">
+    <view class='fa {{item.icon}}'></view>
+    <text>{{item.text}}</text>
+  </view>
+</view> 
+<view class='title'>菜单按钮（WXS数组循环）</view>
+<wxs module="menu2">
+  var menu2 = [
+    { 'icon': 'fa-home', 'text': '首页' },
+    { 'icon': 'fa-fenlei', 'text': '分类' },
+    { 'icon': 'fa-youjian', 'text': '消息' },
+    { 'icon': 'fa-dingwei', 'text': '地图' },
+    { 'icon': 'fa-jingjiren', 'text': '我的' }
+  ];
+  module.exports.menu2 = menu2;
+</wxs>
+<view class='menu-demo'>
+  <view class='menu-item' wx:for="{{menu2.menu2}}" wx:key="menu2">
+    <view class='fa {{item.icon}}'></view>
+    <text>{{item.text}}</text>
+  </view>
+</view> 
+<!-- 导航按钮 -->
+<view class='title'>导航按钮（WXS数组循环）</view>
+<wxs module="nav">
+  var nav = [
+    { 'icon': 'fa-home', 'title': '消息', 'text': '查看消息' },
+    { 'icon': 'fa-qiche-copy-copy', 'title': '汽车', 'text': '查看汽车' },
+    { 'icon': 'fa-dianying', 'title': '电影', 'text': '查看电影' },
+    { 'icon': 'fa-yinle', 'title': '音乐', 'text': '查看音乐' },
+  ];
+  module.exports.nav = nav;
+</wxs>
+<navigator url='index' class='nav' wx:for="{{nav.nav}}" wx:key="anv">
+  <view class='fa {{item.icon}}'></view>
+  <text class='nav-title'>{{item.title}}</text>
+  <text class='nav-text'>{{item.text}}</text>
+  <view class='fa fa-next'></view>
+</navigator>
+
