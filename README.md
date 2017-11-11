@@ -260,7 +260,7 @@ Page({
 
 demo结构跟上一个类似，可以参考，此参考还是用WXS循环
 
-```
+``` css
 .nav{
   width: calc(100% - 40rpx);
   height: 80rpx;
